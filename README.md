@@ -20,8 +20,8 @@
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -45,4 +45,3 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-- belongs_to :group_users

@@ -1,0 +1,51 @@
+-# チャット画面
+.chat
+  .chat-header
+    .chat-header__group
+      -# グループ名
+      %p.chat-header__group-groupname
+        サンプル
+      -# グループメンバー
+      %p.chat-header__group-groupmember
+        テスト、テスト
+    -# Editボタン
+    %input{:type => "submit", :value => "Edit"}
+  -# メッセージ画面
+  .chat-messages
+    -# テストデータ1
+    -# メッセージ
+    .chat-messages__message
+      .chat-messages__message-info
+        -# ユーザー名
+        %p.chat-messages__message-info--name
+          テスト
+        -# 日付
+        %p.chat-messages__message-info--timestamp
+          2019/10/08(Tue) 01:40:11
+      -# テキスト
+      %p.chat-messages__message-main
+        hello
+    -# テストデータ2
+    -# メッセージ
+    .chat-messages__message
+      .chat-messages__message-info
+        -# ユーザー名
+        %p.chat-messages__message-info--name
+          テスト
+        -# 日付
+        %p.chat-messages__message-info--timestamp
+          2019/10/08(Tue) 01:40:11
+      -# テキスト
+      %p.chat-messages__message-main
+        hello
+  -# 入力フォーム
+  .chat-form
+    %form.chat-form__input
+      -# テキスト入力欄
+      %input{:name => "message", :placeholder => "type a message", :type => "text", :value => ""}
+      -# ファイル選択アイコン
+      %label{class: "input-image"}
+        = fa_icon 'image'
+        %input{:name => "file", class: "input_image", :type => "file", :value => ""}
+      -# Sendボタン
+      %input{:type => "submit", :value => "Send"}

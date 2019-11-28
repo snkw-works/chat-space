@@ -1,0 +1,173 @@
+/****** 変数定義 *****/
+$font-color: white;
+$buton-color: #38AEF0;
+
+/****** サイドバー *****/
+.side{
+  position: fixed;
+  z-index: 1;
+  padding: 0px;
+  width: 300px;
+  background-color: #253141;
+  &-top{
+    z-index: 1;
+    padding: 0 20px;
+    height: 100px;
+    color: $font-color;
+    line-height: 100px;
+    font-weight: bold;
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      &-name{
+        font-size: 16px;
+      }
+      &-icon{
+        &--edit{
+          .fa{
+            color: $font-color;
+          }
+        }
+        &--cog{
+          .fa{
+            color: $font-color;
+          }
+        }
+      }
+    }
+  }
+  &-groups{
+    position: relative;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    background-color: #2f3e51;
+    color: $font-color;
+    &__box{
+      padding-top: 20px;
+      padding-bottom: 40px;
+      background-color: #2f3e51;
+      &-name{
+        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 15px;
+      }
+      &-icon{
+        display: inline-block;
+      }
+      &-message{
+        font-size: 11px;
+      }
+    }
+  }
+}
+/****** チャット画面 *****/
+.chat{
+  position: absolute;
+  left: 300px;
+  width: calc(100% - 300px);
+  height: 100%;
+  &-header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: calc(100% - 380px);
+    height: 100px;
+    padding: 0 40px 0 40px;
+    background-color: #fff;
+    border-bottom: solid thin #eeeeee;
+    &__group{
+      margin-top: 35px;
+      width: 100px;
+      &-groupname{
+        padding: 0 0 15px 0;
+        color: #333333;
+        font-size: 20px;
+      }
+      &-groupmember{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    input[type="submit"] {
+      position: absolute;
+      right: 0;
+      margin-top: 28px;
+      margin-right: 40px;
+      padding: 0 20px 0 20px;
+      height: 40px;
+      color: $buton-color;
+      border: solid thin $buton-color;
+      cursor: pointer;
+    }
+  }
+  &-messages{
+    position: relative;
+    margin-top: 99px;
+    padding: 46px 40px 40px 40px;
+    &__message{
+      padding-bottom: 40px;
+      &-info{
+        display: flex;
+        justify-content: flex-start;
+        &--name{
+          color: #434A54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &--timestamp{
+          margin-left: 10px;
+          line-height: 12px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &-main{
+        margin-bottom: 40px;
+        padding-top: 10px;
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+/****** 入力フォーム *****/
+  &-form{
+    position: fixed;
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    padding: 0 40px 0 40px;
+    line-height: 90px;
+    background-color: #DDDDDD;
+    &__input{
+      width: 100%;
+      input[type="text"] {
+        height: 50px;
+        width: calc(100% - 520px);
+        margin: auto 10px;
+        padding-left: 10px;
+        border: none;
+        font-size: 16px;
+        color: #434A54;
+      }
+      .input-image{
+        position: absolute;
+        right: 560px;
+        cursor: pointer;
+      }
+      input[type="file"]{
+        display: none;
+      }
+      input[type="submit"] {
+        height: 50px;
+        width: 100px;
+        margin-right: 40px;
+        margin-left: 15px;
+        background-color: $buton-color;
+        color: #FFF;
+        cursor: pointer;
+      }
+    }
+  }
+}

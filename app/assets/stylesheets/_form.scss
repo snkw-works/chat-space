@@ -1,0 +1,39 @@
+.chat-form{
+  position: fixed;
+  bottom: 0;
+  left:300px;
+  height: 90px;
+  width: 100%;
+  padding: 0 40px 0 40px;
+  line-height: 90px;
+  background-color: $color-back_gray;
+  &__input{
+    width: 100%;
+    &-message{
+      height: 50px;
+      width: calc(100% - 520px);
+      margin: auto 10px;
+      padding-left: 10px;
+      border: none;
+      font-size: 16px;
+      color: $color-font_gray;
+    }
+    &-image{
+      position: absolute;
+      right: 560px;
+      cursor: pointer;
+      &-file{
+        display: none;
+      }
+    }
+    &-submit{
+      height: 50px;
+      width: 100px;
+      margin-right: 40px;
+      margin-left: 15px;
+      background-color: $color-lightblue;
+      color: $color-white;
+      cursor: pointer;
+    }
+  }
+}

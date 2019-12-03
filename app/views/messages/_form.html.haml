@@ -1,0 +1,7 @@
+.chat-form
+  %form.chat-form__input
+    %input.chat-form__input-message{name: "message", placeholder: "type a message", type: "text", value: ""}
+    %label.chat-form__input-image
+      = fa_icon 'image'
+      %input.chat-form__input-image-file{name: "file", class: "input_image", type: "file", value: ""}
+    %input.chat-form__input-submit{type: "submit", value: "Send"}

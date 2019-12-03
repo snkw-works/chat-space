@@ -1,0 +1,57 @@
+.side{
+  position: fixed;
+  z-index: 1;
+  padding: 0px;
+  width: 300px;
+  background-color: $color-back_navy;
+  &-top{
+    z-index: 1;
+    padding: 0 20px;
+    height: 100px;
+    color: $color-white;
+    line-height: 100px;
+    font-weight: bold;
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      &-name{
+        font-size: 16px;
+      }
+      &-icon{
+        &--edit{
+          .fa{
+            color: $color-white;
+          }
+        }
+        &--cog{
+          .fa{
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  &-groups{
+    position: relative;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    background-color: $color-back_lightnavy;
+    color: $color-white;
+    &__box{
+      padding-top: 20px;
+      padding-bottom: 40px;
+      background-color: $color-back_lightnavy;
+      &-name{
+        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 15px;
+      }
+      &-icon{
+        display: inline-block;
+      }
+      &-message{
+        font-size: 11px;
+      }
+    }
+  }
+}
